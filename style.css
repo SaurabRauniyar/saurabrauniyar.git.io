@@ -1,0 +1,840 @@
+/* Google Font CDN Link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: auto !important;
+    overflow-y: visible !important;
+}
+
+
+/* Custom Scroll Bar CSS */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+}
+
+
+/* navbar styling */
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav.sticky {
+    background: #97CCF5;
+    /*skyblue colour*/
+    padding: 13px 0;
+}
+
+nav .navbar {
+    /* flex (kinda inline, all side wise) */
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* nav bar in center, scrolling up and down, doesnt make any difference */
+    margin: auto;
+}
+
+nav .navbar .logo a {
+    font-weight: 500;
+    font-size: 35px;
+    color: #6f91ed;
+    /*Saurab Rauniyar Colour*/
+}
+
+nav.sticky .navbar .logo a {
+    color: #fff;
+}
+
+nav .navbar .menu {
+    display: flex;
+    position: relative;
+    /* home abt, edu,... bar all depend on each other, all move/stop */
+}
+
+nav .navbar .menu li {
+    list-style: none;
+    margin: 0 8px;
+    /* spacing between menu bar */
+}
+
+.navbar .menu a {
+    font-size: 18px;
+    /* menu bar font styling */
+    font-weight: 500;
+    color: #0E2431;
+    padding: 6px 0;
+    transition: all 0.4s ease;
+}
+
+.navbar .menu a:hover {
+    color: #f47340;
+    /* hovering on menu bar colour changes to orange (#f47340) */
+}
+
+nav.sticky .menu a {
+    color: #FFF;
+    /*Sticky, or fixed, navigation is basically a website menu
+                                              that is locked into place so that it does not disappear when 
+                                              the user scrolls down the page.*/
+}
+
+nav.sticky .menu a:hover {
+    color: #0E2431;
+}
+
+.navbar .media-icons a {
+    color: #97CCF5;
+    font-size: 18px;
+    margin: 0 6px;
+}
+
+nav.sticky .media-icons a {
+    color: #FFF;
+}
+
+
+/* Side Navigation Menu Button CSS */
+
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+nav .menu-btn {
+    color: #4070f4;
+}
+
+nav.sticky .menu-btn {
+    color: #FFF;
+}
+
+.navbar .menu .menu-btn {
+    color: #fff;
+}
+
+
+/* home section styling */
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background: url("images/background.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+}
+
+.home .home-content {
+    width: 90%;
+    height: 100%;
+    /* Hello, I am rau part(left side part, home section) */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home .text-one {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.home .text-two {
+    color: #F4A460;
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .text-three {
+    font-size: 40px;
+    margin: 5px 0;
+    color: #D2691E;
+}
+
+.home .text-four {
+    font-size: 23px;
+    margin: 5px 0;
+    color: #DAA520;
+}
+
+.home .button {
+    margin: 14px 0;
+}
+
+.home .button button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background: #4070f4;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover {
+    border-color: #4070f4;
+    background-color: #fff;
+    color: #4070f4;
+}
+
+
+/* About Section Styling */
+
+
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+
+section {
+    padding-top: 40px;
+    /*next page*/
+}
+
+section .content {
+    width: 80%;
+    /* photo n letter width */
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about {
+    background: #F0F8FF;
+}
+
+.about .about-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span {
+    color: #0E2431;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before,
+section .title span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #4070f4;
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-details .left {
+    width: 45%;
+}
+
+.about .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details .right {
+    width: 55%;
+}
+
+section .topic {
+    color: #0E2431;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.about-details .right p {
+    text-align: justify;
+    color: #0E2431;
+    font-style: italic;
+    text-transform: inherit;
+    text-align: justify;
+}
+
+
+/*start of education*/
+
+
+/* */
+
+section {
+    padding-top: 70px;
+    /*next page*/
+}
+
+.education {
+    background: #F0F8FF;
+}
+
+.education .content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 35px 0;
+}
+
+.education .text {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.education .content .grid-container .row {
+    padding: 0px 35px;
+    height: 230px;
+    width: 100%;
+    position: relative;
+}
+
+.education .content .grid-container .row .left-col {
+    background-color: rgb(25, 124, 149);
+    color: white;
+    float: left;
+    width: 25%;
+    height: 210px;
+    font-style: italic;
+    text-align: center;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 50px 0;
+    font-size: 10px;
+    position: relative;
+}
+
+.education .content .grid-container .row .right-col {
+    float: left;
+    width: 75%;
+    background-color: #ececec;
+    height: 210px;
+    color: rgb(8, 8, 8);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 15px;
+    text-align: justify;
+}
+.education .content .grid-container .row .right-col-3 {
+    float: left;
+    width: 75%;
+    background-color: #ececec;
+    height: 210px;
+    color: rgb(8, 8, 8);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 15px;
+    text-align: justify;
+    position: relative;
+   
+}
+
+
+/*end of Education*/
+
+
+/*start of experience*/
+
+
+
+
+/* */
+
+section {
+    padding-top: 40px;
+    /*next page*/
+}
+
+.experience {
+    background: #F0F8FF;
+}
+
+.experience .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.experience .text {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    text-align: justify;
+    color: #0E2431;
+    font-style: italic;
+    text-transform: inherit;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.experience .content .grid-container {
+    display: flex;
+}
+
+.experience .content .grid-container .row {
+    padding: 0px 27px;
+    height: 177px;
+    width: 100%;
+}
+
+.experience .content .grid-container .row1 .left-col {
+    background-color: rgb(25, 124, 149);
+    color: white;
+    float: left;
+    width: 25%;
+    height: 200px;
+    font-style: italic;
+    text-align: center;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 50px 0;
+    font-size: 10px;
+}
+
+.experience .content .grid-container .row1 .right-col {
+    float: left;
+    width: 75%;
+    background-color: #ececec;
+    height: 200px;
+    color: rgb(8, 8, 8);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 15px;
+    text-align: justify;
+}
+
+.experience .content .grid-container .row2 .left-col {
+    background-color: rgb(25, 124, 149);
+    color: white;
+    float: left;
+    width: 25%;
+    height: 200px;
+    font-style: italic;
+    text-align: center;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 50px 0;
+    font-size: 9px;
+}
+
+.experience .content .grid-container .row2 .right-col {
+    float: left;
+    width: 75%;
+    background-color: #ececec;
+    height: 200px;
+    color: rgb(8, 8, 8);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-style: italic;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 15px;
+    text-align: justify;
+}
+
+.experience .content .grid-container .row3 .left-col {
+    background-color: rgb(25, 124, 149);
+    color: white;
+    float: left;
+    width: 25%;
+    height: 200px;
+    font-style: italic;
+    text-align: center;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 50px 0;
+    font-size: 9px;
+}
+
+.experience .content .grid-container .row3 .right-col {
+    float: left;
+    width: 75%;
+    background-color: #ececec;
+    height: 200px;
+    color: rgb(8, 8, 8);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: italic;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 15px;
+    text-align: justify;
+}
+
+.experience .content .grid-container .row4 .left-col {
+    background-color: rgb(25, 124, 149);
+    color: white;
+    float: left;
+    width: 25%;
+    height: 200px;
+    font-style: italic;
+    text-align: center;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 50px 0;
+    font-size: 9px;
+}
+
+.experience .content .grid-container .row4 .right-col {
+    float: left;
+    width: 75%;
+    background-color: #ececec;
+    height: 200px;
+    color: rgb(8, 8, 8);
+    font-size: 20px;
+    border: 5px solid rgb(226, 230, 226);
+    padding: 15px;
+    text-align: justify;
+}
+
+
+/*end of Education*/
+
+
+/*end of expererience*/
+
+
+/* My Skills CSS */
+
+section {
+    padding-top: 30px 0;
+    /*next page*/
+}
+
+.skills {
+    background: #F0F8FF;
+}
+
+.skills .content {
+    margin: 0 auto;
+    padding: 30px 0;
+    /* My skills page adjustment from top*/
+}
+
+section .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.skills .content .skills-details {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.skills .content .skills-details .text {
+    /*text width*/
+    padding-left: 35px 0;
+    /* margin-left: 292px; */
+}
+
+
+/* My publication */
+
+section {
+    padding-top: 70px;
+    /*next page*/
+}
+
+.publication {
+    background: #F0F8FF;
+}
+
+.publication .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.publication .text {
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+/*End of publication*/
+
+
+/*start of awards*/
+
+
+/*start of education*/
+
+
+/* */
+
+section {
+    padding-top: 80px;
+    /*next page*/
+}
+
+.awards {
+    background: #F0F8FF;
+}
+
+.awards .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.awards .text {
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+
+/*end of awards*/
+
+
+/* Contact */
+
+#contact {
+    padding: 100px 50px;
+    background: linear-gradient(310deg, #b7ceeb 45%, white 0%);
+}
+
+.contact {
+    background: #F0F8FF;
+}
+
+.contact .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.contact .text {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* Footer CSS */
+
+footer {
+    background: #F0F8FF;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: #080808;
+}
+
+footer .text span a {
+    font-weight: 500;
+    color: #080808;
+}
+
+footer .text span a:hover {
+    text-decoration: underline;
+}
+
+
+/* Scroll TO Top Button CSS */
+
+.scroll-button a {
+    /* Bottom arrow */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Bottom arrow */
+    color: #fff;
+    background: #4070f4;
+    padding: 7px 12px;
+    ;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+
+/* Responsive Media Query */
+
+@media (max-width: 1190px) {
+    section .content {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about .about-details {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .about-details .left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-details .right {
+        width: 90%;
+        margin: 40px 0;
+    }
+    .services .boxes .box {
+        margin: 20px 0;
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .about .left img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 750px) {
+    nav .navbar {
+        width: 90%;
+    }
+    nav .navbar .menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background: #0E2431;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    .navbar.active .menu {
+        left: 0;
+    }
+    nav .navbar .menu a {
+        font-size: 23px;
+        display: block;
+        color: #fff;
+        margin: 10px 0;
+    }
+    nav.sticky .menu a:hover {
+        color: #4070f4;
+    }
+    nav .navbar .media-icons {
+        display: none;
+    }
+    nav .menu-btn,
+    .navbar .menu .cancel-btn {
+        display: block;
+    }
+    .home .text-two {
+        font-size: 65px;
+    }
+    .home .text-three {
+        font-size: 35px;
+    }
+    .skills .skills-details {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .skills-details .text {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .skills-details .boxes {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .education .content .grid-container{
+        width: 100%;
+
+    }
+    .services .boxes .box {
+        margin: 20px 0;
+        width: 100%;
+    }
+    .contact .text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .text-two {
+        font-size: 55px;
+    }
+    .home .text-three {
+        font-size: 33px;
+    }
+    .skills-details .boxes .per {
+        font-size: 50px;
+        color: #4070f4;
+    }
+}
